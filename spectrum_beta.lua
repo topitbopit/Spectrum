@@ -2343,22 +2343,21 @@ phase:NewToggle("phaseface", {Text = "face center", Description = "When enabled,
     
 })
 phase_speed = phase:NewSlider("phasespeed", {Text = "speed", Description = "How fast you move while phasing", Min = 25, Max = 100})
---phase:NewInput("phaseinput", {Text = "Input", Description = "hi"})
 phase:NewHotkey("phasekey")
 
 
 
 
-movement:NewButton("noclip",     {Text = "noclip", Description = "Disables wall collision",
-    Enable = function() 
-        
-    end,
-    Disable = function() 
-        
-    end
-    
-    
-})
+--movement:NewButton("noclip",     {Text = "noclip", Description = "Disables wall collision",
+--    Enable = function() 
+--        
+--    end,
+--    Disable = function() 
+--        
+--    end
+--    
+--    
+--})
 gravity = movement:NewButton("gravity",  {Text = "gravity", Description = "Applies a low gravity effect, slowing down your fall",
     Enable = function()
         local mode = movement:gc("gravity"):gc("gravitymode")["value"]
@@ -2453,27 +2452,27 @@ gravity:NewDropdown("gravitymode", {Text = "method", Enums = {
 gravity:NewHotkey("gravityhotkey")
 
 
-movement:NewButton("swim",       {Text = "swim", Description = "Lets you swim in midair."})
-local clicktp = movement:NewButton("clicktp",    {Text = "ctrl-click tp", Description = "Teleports you to your mouse when you press LeftControl and MouseButton1"})
-movement:NewButton("jetpack",    {Text = "jetpack", Description = "Like flight, but velocity based"})
-movement:NewButton("noslowdown", {Text = "no slowdown", Description = "Prevents you from having too low of a walkspeed. Very limited in scope as every game works different"})
-movement:NewButton("parkour",    {Text = "parkour", Description = "Jumps when you reach the end of part"})
-movement:NewButton("safewalk",   {Text = "safewalk", Description = "Prevents you from walking off of a part"})
-quickfall = movement:NewButton("quickfall",  {Text = "quickfall", Description = "Makes you fall down very fast. May trigger some anti-teleportation anticheats, but may bypass falldamage scripts"})
-movement:NewButton("highjump",   {Text = "highjump", Description = "Makes you jump higher"})
-movement:NewButton("float",      {Text = "float", Description = "Lets you float. A hotkey is recommended!"})
+--movement:NewButton("swim",       {Text = "swim", Description = "Lets you swim in midair."})
+--local clicktp = movement:NewButton("clicktp",    {Text = "ctrl-click tp", Description = "Teleports you to your mouse when you press LeftControl and MouseButton1"})
+--movement:NewButton("jetpack",    {Text = "jetpack", Description = "Like flight, but velocity based"})
+--movement:NewButton("noslowdown", {Text = "no slowdown", Description = "Prevents you from having too low of a walkspeed. Very limited in scope as every game works different"})
+--movement:NewButton("parkour",    {Text = "parkour", Description = "Jumps when you reach the end of part"})
+--movement:NewButton("safewalk",   {Text = "safewalk", Description = "Prevents you from walking off of a part"})
+--quickfall = movement:NewButton("quickfall",  {Text = "quickfall", Description = "Makes you fall down very fast. May trigger some anti-teleportation anticheats, but may bypass falldamage scripts"})
+--movement:NewButton("highjump",   {Text = "highjump", Description = "Makes you jump higher"})
+--movement:NewButton("float",      {Text = "float", Description = "Lets you float. A hotkey is recommended!"})
 
 
 render = ui:NewMenu("render")
 
-esp = render:NewButton("esp",        {Text = "ESP", Description = "Highlights players with a certain team, username, etc."})
-esp_transparency = esp:NewSlider("espt", {Text = "transparency", Description = "The transparency of the ESP", Min = 20, Max = 70})
-esp:NewDropdown("espmode", {Text = "method", Enums = { 
-    {Enum = "Infinite Yield", Description = "The same ESP Infinite Yield uses"},
-    {Enum = "Billboard", Description = "Normal ESP. Could be detected, but pretty much no game ever checks"},
-    {Enum = "Skeleton", Description = "Uses Drawing library. Undetectable, but may lag"}
-}})
-esp:NewHotkey("esphotkey")
+--esp = render:NewButton("esp",        {Text = "ESP", Description = "Highlights players with a certain team, username, etc."})
+--esp_transparency = esp:NewSlider("espt", {Text = "transparency", Description = "The transparency of the ESP", Min = 20, Max = 70})
+--esp:NewDropdown("espmode", {Text = "method", Enums = { 
+--    {Enum = "Infinite Yield", Description = "The same ESP Infinite Yield uses"},
+--    {Enum = "Billboard", Description = "Normal ESP. Could be detected, but pretty much no game ever checks"},
+--    {Enum = "Skeleton", Description = "Uses Drawing library. Undetectable, but may lag"}
+--}})
+--esp:NewHotkey("esphotkey")
 
 
 render:NewButton("tracers",    {Text = "tracers", Description = "Draws lines onto ESP targets. Requires drawing library"})
@@ -2533,12 +2532,12 @@ crosshair:NewSlider("chhsize", {Text = "horizontal size", Description = "How wid
 crosshair:NewHotkey("chkey")
 
 
-local nametags = render:NewButton("nametags",   {Text = "nametags", Description = "Enables custom nametags that show username, distance, and other specified options"})
-
-local fullbright = render:NewButton("fullbright", {Text = "fullbright", Description = "Disables lighting effects; works for most games"})
-
-render:NewButton("nofog",      {Text = "nofog", Description = "Disables fog effects; works for most games"})
-render:NewButton("xray",       {Text = "xray", Description = "Sets every part's transparency to a specified value"})
+--local nametags = render:NewButton("nametags",   {Text = "nametags", Description = "Enables custom nametags that show username, distance, and other specified options"})
+--
+--local fullbright = render:NewButton("fullbright", {Text = "fullbright", Description = "Disables lighting effects; works for most games"})
+--
+--render:NewButton("nofog",      {Text = "nofog", Description = "Disables fog effects; works for most games"})
+--render:NewButton("xray",       {Text = "xray", Description = "Sets every part's transparency to a specified value"})
 render:NewButton("chroma",     {Text = "chroma", Description = "Tints everything chroma",
     Enable = function() 
         ui:AddRGB(ui:GetObject("CCEFFECT"), "TintColor") 
@@ -2548,30 +2547,30 @@ render:NewButton("chroma",     {Text = "chroma", Description = "Tints everything
         ui:GetObject("CCEFFECT").TintColor = Color3.new(1, 1, 1) 
     end
 })
-render:NewButton("freecam",     {Text = "freecam", Description = "Lets you control your camera separately from your player"})
-render:NewButton("breadcrumbs", {Text = "breadcrumbs", Description = "Leaves a trail behind you as you walk"})
-render:NewButton("fov",         {Text = "FOV", Description = "Changes your game's FOV"})
-render:NewButton("radar",       {Text = "radar", Description = "Displays nearby players and npcs"})
-
-
-local player = ui:NewMenu("player")
-
-player:NewButton("faceclosest",   {Text = "face closest plr", Description = "Faces your character towards closest player"})
-player:NewButton("hbe",           {Text = "hitbox expander", Description = "Increases the size of a specified part in every character (except for you)"})
-player:NewButton("playertp",      {Text = "TP to player", Description = "Teleports you to a specified player. Has options for delay, offset, etc."})
-player:NewButton("fling",         {Text = "fling", Description = "Flings players you walk into"})
-player:NewButton("antifling",     {Text = "antifling", Description = "Stops skids from flinging you. Works best against standard modes but may stop netbypass flings"})
-player:NewButton("antitp",        {Text = "antitp", Description = "Self explanatory. Useful against anticheats that warp you back if you speed."})
-player:NewButton("flashback",     {Text = "flashback", Description = "Teleports you back upon death. Has optional delay, and tweening"})
-player:NewButton("follow",        {Text = "follow", Description = "Follows a specified player. If it cannot reach them, it will immediately quit"})
-player:NewButton("alto",          {Text = "alto", Description = "Baritone but for roblox"})
+--render:NewButton("freecam",     {Text = "freecam", Description = "Lets you control your camera separately from your player"})
+--render:NewButton("breadcrumbs", {Text = "breadcrumbs", Description = "Leaves a trail behind you as you walk"})
+--render:NewButton("fov",         {Text = "FOV", Description = "Changes your game's FOV"})
+--render:NewButton("radar",       {Text = "radar", Description = "Displays nearby players and npcs"})
+--
+--
+--local player = ui:NewMenu("player")
+--
+--player:NewButton("faceclosest",   {Text = "face closest plr", Description = "Faces your character towards closest player"})
+--player:NewButton("hbe",           {Text = "hitbox expander", Description = "Increases the size of a specified part in every character (except for you)"})
+--player:NewButton("playertp",      {Text = "TP to player", Description = "Teleports you to a specified player. Has options for delay, offset, etc."})
+--player:NewButton("fling",         {Text = "fling", Description = "Flings players you walk into"})
+--player:NewButton("antifling",     {Text = "antifling", Description = "Stops skids from flinging you. Works best against standard modes but may stop netbypass flings"})
+--player:NewButton("antitp",        {Text = "antitp", Description = "Self explanatory. Useful against anticheats that warp you back if you speed."})
+--player:NewButton("flashback",     {Text = "flashback", Description = "Teleports you back upon death. Has optional delay, and tweening"})
+--player:NewButton("follow",        {Text = "follow", Description = "Follows a specified player. If it cannot reach them, it will immediately quit"})
+--player:NewButton("alto",          {Text = "alto", Description = "Baritone but for roblox"})
 
 local misc = ui:NewMenu("misc")
 
 
-misc:NewButton("shiftlock",  {Text = "force shiftlock", Description = "Force enables shiftlock in games that dont allow it"})
-misc:NewButton("thirdp",     {Text = "force third person", Description = "Force enables third person in games that dont allow it"})
-misc:NewButton("enableall",  {Text = "force all HUDs", Description = "Enables all roblox CoreGuis, such as chat, inventory, etc."})
+--misc:NewButton("shiftlock",  {Text = "force shiftlock", Description = "Force enables shiftlock in games that dont allow it"})
+--misc:NewButton("thirdp",     {Text = "force third person", Description = "Force enables third person in games that dont allow it"})
+--misc:NewButton("enableall",  {Text = "force all HUDs", Description = "Enables all roblox CoreGuis, such as chat, inventory, etc."})
 remotespam = misc:NewButton("remotespam", {Text = "remote spam", Description = "Spams all remotes with random args. May lag server; may get you banned", 
     Enable = function() 
         remotespam_enable = true
@@ -2612,27 +2611,27 @@ remotespam_delay = remotespam:NewSlider("remotedelay", {Text = "delay", Descript
 remotespam:NewHotkey("remotekey")
 
 
-misc:NewButton("fakelag",    {Text = "fakelag", Description = "Makes you look laggy. However, everything else looks laggy for you!"})
-misc:NewButton("lagswitch",  {Text = "lagswitch", Description = "(R6 ONLY) Makes you look frozen / laggy. However, everything else (tools, interactions, etc.) works fine"})
-
-
-
-local util = ui:NewMenu("utilities")
-
-util:NewButton("pickupall",       {Text = "pickup all", Description = "Attempts to pick up every item in Workspace. Useful for games with items you click to pickup"})
-util:NewButton("acidentify",      {Text = "anticheat detector", Description = "Detects anticheat scripts in your game. Optionally destroys local anticheats"})
-util:NewButton("antiafk",         {Text = "antiafk", Description = "Prevents you from being detected for AFK"})
-util:NewButton("selfkill",        {Text = "selfkill", Description = "Kills yourself. Has various methods, letting you potentially glitch out games"})
-util:NewButton("constantstate",   {Text = "8state", Description = "Constantly sets your HumanoidState to 8, stopping you from ragdolling, getting in chairs, or similar states"})
-
-
-local chat = ui:NewMenu("chat")
-
-chat:NewButton("chatlogs",   {Text = "chat logs", Description = "Enables chat logs. Highlights admin commands, pms, and /e commands"})
-chat:NewButton("customchat",   {Text = "custom chat", Description = "Enables a custom version of the Roblox chat gui. Should be compatible with scripts that require the roblox chat gui"})
-chat:NewButton("chatspammer",   {Text = "chat spammer", Description = "Spams the chat with a custom message and delay"})
-chat:NewButton("chatbypass",   {Text = "chat bypass", Description = "Bypasses chat. Has various settings"})
-chat:NewButton("fancychat",   {Text = "fancy chat", Description = "Sends your chat messages with a different font than normal"})
+--misc:NewButton("fakelag",    {Text = "fakelag", Description = "Makes you look laggy. However, everything else looks laggy for you!"})
+--misc:NewButton("lagswitch",  {Text = "lagswitch", Description = "(R6 ONLY) Makes you look frozen / laggy. However, everything else (tools, interactions, etc.) works fine"})
+--
+--
+--
+--local util = ui:NewMenu("utilities")
+--
+--util:NewButton("pickupall",       {Text = "pickup all", Description = "Attempts to pick up every item in Workspace. Useful for games with items you click to pickup"})
+--util:NewButton("acidentify",      {Text = "anticheat detector", Description = "Detects anticheat scripts in your game. Optionally destroys local anticheats"})
+--util:NewButton("antiafk",         {Text = "antiafk", Description = "Prevents you from being detected for AFK"})
+--util:NewButton("selfkill",        {Text = "selfkill", Description = "Kills yourself. Has various methods, letting you potentially glitch out games"})
+--util:NewButton("constantstate",   {Text = "8state", Description = "Constantly sets your HumanoidState to 8, stopping you from ragdolling, getting in chairs, or similar states"})
+--
+--
+--local chat = ui:NewMenu("chat")
+--
+--chat:NewButton("chatlogs",   {Text = "chat logs", Description = "Enables chat logs. Highlights admin commands, pms, and /e commands"})
+--chat:NewButton("customchat",   {Text = "custom chat", Description = "Enables a custom version of the Roblox chat gui. Should be compatible with scripts that require the roblox chat gui"})
+--chat:NewButton("chatspammer",   {Text = "chat spammer", Description = "Spams the chat with a custom message and delay"})
+--chat:NewButton("chatbypass",   {Text = "chat bypass", Description = "Bypasses chat. Has various settings"})
+--chat:NewButton("fancychat",   {Text = "fancy chat", Description = "Sends your chat messages with a different font than normal"})
 
 
 --local fun = ui:NewMenu("fun")
