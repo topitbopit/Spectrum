@@ -2452,6 +2452,12 @@ gravity:NewDropdown("gravitymode", {Text = "method", Enums = {
 gravity:NewHotkey("gravityhotkey")
 
 
+movement:NewButton("among1", {Text = "among 1",Description = "among 1"})
+movement:NewButton("among2", {Text = "among 2",Description = "among 2"})
+movement:NewButton("among3", {Text = "among 3",Description = "among 3"})
+movement:NewButton("among4", {Text = "among 4",Description = "among 4"})
+movement:NewButton("among5", {Text = "among 5",Description = "among 5"})
+movement:NewButton("among6", {Text = "among 6",Description = "among 7 (get fucked)"})
 --movement:NewButton("swim",       {Text = "swim", Description = "Lets you swim in midair."})
 --local clicktp = movement:NewButton("clicktp",    {Text = "ctrl-click tp", Description = "Teleports you to your mouse when you press LeftControl and MouseButton1"})
 --movement:NewButton("jetpack",    {Text = "jetpack", Description = "Like flight, but velocity based"})
