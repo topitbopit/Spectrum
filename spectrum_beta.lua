@@ -285,7 +285,7 @@ local ui = {} do
                 end
                 
             end
-        end, false, 99999, Enum.KeyCode.Insert)
+        end, false, 99999, Enum.KeyCode.RightShift)
         
         ctx:BindActionAtPriority("CLOSE",function(_, state, obj)
             if state == Enum.UserInputState.Begin then
